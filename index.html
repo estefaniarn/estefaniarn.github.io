@@ -1,10 +1,28 @@
+<!DOCTYPE html>
 <html>
-  <head>
-    <title> Estefania Roldan Nicolau (PhD Candidate)
-  </head>
-    
-  
-  <body>
-    <h1> Time series from real and simulated data (Growing season 2021) </h1>
-  </body>
+<head>
+  <title>Estefania Roldan Nicolau (PhD Candidate)</title>
+</head>
+<body>
+  <h1>Estefania Roldan Nicolau (PhD Candidate)</h1>
+
+  <h2>Time series from real and simulated data (Growing season 2021)</h2>
+
+  <div id="graphContainer">
+    <!-- The graph will be dynamically embedded here -->
+  </div>
+
+  <script>
+    // Dynamically embed the graph using the current repository URL
+    var repoURL = window.location.origin + window.location.pathname.replace("/index.html", "");
+    var graphURL = repoURL + "/path/to/your/graph.html";
+
+    var graphContainer = document.getElementById("graphContainer");
+    var iframe = document.createElement("iframe");
+    iframe.src = graphURL;
+    iframe.width = "800";
+    iframe.height = "600";
+    graphContainer.appendChild(iframe);
+  </script>
+</body>
 </html>
