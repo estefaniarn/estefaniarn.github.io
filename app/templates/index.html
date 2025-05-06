@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Carbon Footprint Savings</title>
+</head>
+<body>
+    <h1>Carbon Footprint Calculator</h1>
+    <p>How many kilometers did you walk, bike, or use public transport this week?</p>
+
+    <form action="/calculate" method="post">
+        <!-- Distance Question -->
+        <label>Select distance (km):</label>
+        <select name="distance" id="distance" onchange="toggleCustomInput()">
+            <option value="10">10 km</option>
+            <option value="20">20 km</option>
+            <option value="30">30 km</option>
+            <option value="40">40 km</option>
+            <option value="50">50 km</option>
+            <option value="80">80 km</option>
+            <option value="100">100 km</option>
+            <option value="other">Other</option>
+        </select><br><br>
+
+        <div id="customDistanceDiv" style="display:none;">
+            <label>Enter custom distance (km):</label>
+            <input type="number" name="custom_distance" step="0.1" min="0">
+        </div><br>
+
+        <!-- Vegetarian Meals Question -->
+        <label>Select number of vegetarian meals:</label>
+        <select name="vegetarian_meals">
+            <option value="1">1 meal</option>
+            <option value="2">2 meals</option>
+            <option value="3">3 meals</option>
+            <option value="4">4 meals</option>
+            <option value="5">5 meals</option>
+            <option value="7">7 meals</option>
+            <option value="10">10 meals</option>
+            <option value="other">Other</option>
+        </select><br><br>
+
+        <div id="customMealsDiv" style="display:none;">
+            <label>Enter custom number of meals:</label>
+            <input type="number" name="custom_meals" step="1" min="0">
+        </div><br>
+
+        <button type="submit">Calculate</button>
+    </form>
+
+    <script>
+        function toggleCustomInput() {
+            const selected = document.getElementById('distance').value;
+            const customDiv = document.getElementById('customDistanceDiv');
+            customDiv.style.display = selected === 'other' ? 'block' : 'none';
+        }
+
+        function toggleCustomMealsInput() {
+            const selectedMeals = document.querySelector('select[name="vegetarian_meals"]').value;
+            const customMealsDiv = document.getElementById('customMealsDiv');
+            customMealsDiv.style.display = selectedMeals === 'other' ? 'block' : 'none';
+        }
+        
+        document.querySelector('select[name="vegetarian_meals"]').addEventListener('change', toggleCustomMealsInput);
+    </script>
+</body>
+</html>
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Carbon Footprint Calculator</title>
+</head>
+<body>
+    <h1>Carbon Footprint Calculator</h1>
+    <p>Enter your details to estimate your carbon footprint.</p>
+
+    <form action="/calculate" method="post">
+        <label>Electricity Usage (kWh/month):</label>
+        <input type="number" name="electricity" step="0.1" required><br><br>
+
+        <label>Gasoline Used (liters/month):</label>
+        <input type="number" name="gasoline" step="0.1" required><br><br>
+
+        <button type="submit">Calculate</button>
+    </form>
+</body>
+</html> -->

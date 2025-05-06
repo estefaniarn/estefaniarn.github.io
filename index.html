@@ -1,28 +1,63 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Estefania Roldan Nicolau (PhD Candidate)</title>
+  <meta charset="UTF-8">
+  <title>Welcome to Estefania's Projects</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f0f8ff;
+      padding: 50px;
+    }
+
+    h1 {
+      color: #2c3e50;
+    }
+
+    .card {
+      display: inline-block;
+      background: white;
+      margin: 20px;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      width: 300px;
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+      background-color: #28a745;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    a:hover {
+      background-color: #218838;
+    }
+  </style>
 </head>
 <body>
-  <h1>Estefania Roldan Nicolau (PhD Candidate)</h1>
+  <h1>Welcome to My GitHub Projects</h1>
+  <p>Select a project to explore:</p>
 
-  <h2>Time series from real and simulated data [L] (Growing season 2021)</h2>
-
-  <div id="graphContainer">
-    <!-- The graph will be dynamically embedded here -->
+  <div class="card">
+    <h2>🌱 Carbon Footprint Calculator</h2>
+    <p>Estimate your environmental impact and track your carbon savings.</p>
+    <a href="app/">Go to Calculator</a>
   </div>
 
-  <script>
-    // Dynamically embed the graph using the current repository URL
-    var repoURL = window.location.origin + window.location.pathname.replace("/index.html", "");
-    var graphURL = repoURL + "/stockflow.html";
-
-    var graphContainer = document.getElementById("graphContainer");
-    var iframe = document.createElement("iframe");
-    iframe.src = graphURL;
-    iframe.width = "800";
-    iframe.height = "600";
-    graphContainer.appendChild(iframe);
-  </script>
+  <div class="card">
+    <h2>📊 PhD Graphs</h2>
+    <p>Interactive visualizations and analysis for my research work.</p>
+    <a href="PhD%20graphs/">Go to Graphs</a>
+  </div>
 </body>
 </html>
