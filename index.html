@@ -22,12 +22,13 @@
       padding: 30px;
       border-radius: 10px;
       box-shadow: 0 0 15px rgba(0,0,0,0.1);
-      width: 300px;
+      width: 80%;
+      max-width: 800px;
       transition: transform 0.2s ease;
     }
 
     .card:hover {
-      transform: scale(1.05);
+      transform: scale(1.02);
     }
 
     a {
@@ -42,6 +43,13 @@
     a:hover {
       background-color: #218838;
     }
+
+    iframe {
+      border: none;
+      width: 100%;
+      height: 600px;
+      margin-top: 20px;
+    }
   </style>
 </head>
 <body>
@@ -51,7 +59,7 @@
   <div class="card">
     <h2>🌱 Carbon Footprint Calculator</h2>
     <p>Estimate your environmental impact and track your carbon savings.</p>
-    <a href="app/">Go to Calculator</a>
+    <iframe src="https://carbon-app.onrender.com"></iframe>
   </div>
 
   <div class="card">
