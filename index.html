@@ -31,24 +31,34 @@
       transform: scale(1.02);
     }
 
-    a {
+    a.button-link {
       text-decoration: none;
       color: white;
       background-color: #28a745;
       padding: 10px 20px;
       border-radius: 5px;
       font-weight: bold;
+      display: inline-block;
+      margin-top: 10px;
     }
 
-    a:hover {
+    a.button-link:hover {
       background-color: #218838;
     }
 
-    iframe {
+    button {
+      background-color: #007bff;
+      color: white;
       border: none;
-      width: 100%;
-      height: 600px;
-      margin-top: 20px;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background-color: #0056b3;
     }
   </style>
 </head>
@@ -59,13 +69,26 @@
   <div class="card">
     <h2>🌱 Carbon Footprint Calculator</h2>
     <p>Estimate your environmental impact and track your carbon savings.</p>
-    <a href="https://carbon-calculator-g1n2.onrender.com" target="_blank">Open Calculator</a>
+
+    <!-- Standard anchor link -->
+    <a href="https://carbon-calculator-g1n2.onrender.com" class="button-link" target="_blank">Open Calculator (Link)</a>
+
+    <!-- JavaScript fallback button -->
+    <br>
+    <button onclick="window.open('https://carbon-calculator-g1n2.onrender.com', '_blank')">
+      Open Calculator (Button)
+    </button>
+
+    <!-- Minimal raw link for debugging -->
+    <p>
+      <a href="https://carbon-calculator-g1n2.onrender.com" target="_blank">Test direct link (debug)</a>
+    </p>
   </div>
 
   <div class="card">
     <h2>📊 PhD Graphs</h2>
     <p>Interactive visualizations and analysis for my research work.</p>
-    <a href="PhD%20graphs/">Go to Graphs</a>
+    <a href="PhD%20graphs/" class="button-link">Go to Graphs</a>
   </div>
 </body>
 </html>
