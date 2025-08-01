@@ -15,14 +15,20 @@
       color: #2c3e50;
     }
 
+    .card-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+    }
+
     .card {
-      display: inline-block;
       background: white;
-      margin: 20px;
+      margin: 0 auto;
       padding: 30px;
       border-radius: 10px;
       box-shadow: 0 0 15px rgba(0,0,0,0.1);
-      width: 80%;
+      width: 90%;
       max-width: 800px;
       transition: transform 0.2s ease;
     }
@@ -31,15 +37,29 @@
       transform: scale(1.02);
     }
 
+    .description {
+      font-size: 1rem; /* base description font */
+      color: #333;
+    }
+
+    .subtext {
+      font-size: 0.875rem; /* about 12px relative to 16px base */
+      color: #666;
+      font-style: italic;
+      margin-top: 8px;
+      font-family: 'Georgia', serif;
+    }
+
     a.button-link {
       text-decoration: none;
       color: white;
       background-color: #28a745;
-      padding: 10px 20px;
+      padding: 12px 24px;
       border-radius: 5px;
       font-weight: bold;
       display: inline-block;
-      margin-top: 10px;
+      margin-top: 15px;
+      font-size: 1rem;
     }
 
     a.button-link:hover {
@@ -48,111 +68,72 @@
   </style>
 </head>
 <body>
-  <h1>Welcome to My GitHub Projects</h1>
+  <h1>Welcome to My Projects</h1>
   <p>Select a project to explore:</p>
 
-  <!-- Carbon Calculator Card -->
-  <div class="card">
-    <h2>🌱 Carbon Footprint Calculator</h2>
-    <p>Estimate your environmental impact and track your carbon savings.<br>
-       Built for Bow Valley Climate Action (BVCA) and Jam for Jasper fundraiser use.</p>
-    <a href="https://carbon-calculator-g1n2.onrender.com" class="button-link" target="_blank">
-      Open Calculator
-    </a>
-  </div>
+  <div class="card-container">
 
-  <!-- Research Work Card -->
-  <div class="card">
-    <h2>📊 Research Work: Plant–Water Relations for Conifers Growing in Rock Fractures</h2>
-    <p>Interactive visualizations and analysis for my research work.</p>
-    <a href="PhD%20graphs/" class="button-link" target="_blank">
-      Go to Research Work
-    </a>
+    <!-- Carbon Calculator Card -->
+    <div class="card">
+      <h2>🌱 Carbon Footprint Calculator</h2>
+      <p class="description">
+        Estimate your environmental impact and track your carbon savings.
+      </p>
+      <p class="subtext">
+        Built for Bow Valley Climate Action (BVCA) and Jam for Jasper fundraiser use.
+      </p>
+      <a href="https://carbon-calculator-g1n2.onrender.com" class="button-link" target="_blank">
+        Open Calculator
+      </a>
+    </div>
+
+    <!-- Research Work Card -->
+    <div class="card">
+      <h2>📊 Research Work: Plant–Water Relations for Conifers Growing in Rock Fractures</h2>
+      <p class="description">
+        Interactive visualizations and analysis for my research work.
+      </p>
+      <p class="subtext">
+        This research was conducted under Dr. Edward A. Johnson's supervision at the University of Calgary. 
+      </p>
+      <a href="research_graphs/index.html" class="button-link" target="_blank">
+        Go to Research Work
+      </a>
+    </div>
+
+    <!-- ArcGIS StoryMap Card -->
+    <div class="card">
+      <h2>🗺️ Alternative Tourism Map in Mexico</h2>
+      <p class="description">
+        Interactive map showcasing alternative tourism projects in Mexico. Built using ArcGIS StoryMaps 
+      </p>
+      <p class="subtext">
+        Projects shared by the National Geographic Explorer Hub Mexico members (I don’t own any of them).
+      </p>
+      <a href="https://storymaps.arcgis.com/stories/f6a98d583e69443d933e09ae6a0bc9c4"
+         class="button-link" target="_blank">
+        View StoryMap
+      </a>
+    </div>
+
+    <!-- Flor del Desierto Card -->
+    <div class="card">
+      <h2>🌸 Flor del Desierto: Comunidad de Aprendizaje (Learning Community)</h2>
+      <p class="description">
+        Visit our website to learn more about Flor del Desierto, a grassroots project in Zapotitlán Salinas, Puebla to tackle socio-environmental problems aggravated by the climate crisis.
+      </p>
+      <p class="subtext">
+        I co-founded this project with other fantastic women. 
+      </p>
+      <a href="https://flordeldesierto.org/" class="button-link" target="_blank">
+        Flor del Desierto website 
+      </a>
+    </div>
+
   </div>
 </body>
 </html>
 
 
 
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Welcome to Estefania's Projects</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      background-color: #f0f8ff;
-      padding: 50px;
-    }
 
-    h1 {
-      color: #2c3e50;
-    }
-
-    .card {
-      display: inline-block;
-      background: white;
-      margin: 20px;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
-      width: 80%;
-      max-width: 800px;
-      transition: transform 0.2s ease;
-    }
-
-    .card:hover {
-      transform: scale(1.02);
-    }
-
-    a.button-link {
-      text-decoration: none;
-      color: white;
-      background-color: #28a745;
-      padding: 10px 20px;
-      border-radius: 5px;
-      font-weight: bold;
-      display: inline-block;
-      margin-top: 10px;
-    }
-
-    a.button-link:hover {
-      background-color: #218838;
-    }
-
-    button {
-      background-color: #007bff;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 5px;
-      font-size: 16px;
-      cursor: pointer;
-      margin-top: 10px;
-    }
-
-    button:hover {
-      background-color: #0056b3;
-    }
-  </style>
-</head>
-<body>
-  <h1>Welcome to My GitHub Projects</h1>
-  <p>Select a project to explore:</p>
-
-  <div class="card">
-    <h2>🌱 Carbon Footprint Calculator</h2>
-    <p>Estimate your environmental impact and track your carbon savings.</p>
-
-    <!-- Standard anchor link -->
-    <a href="https://carbon-calculator-g1n2.onrender.com" class="button-link" target="_blank">Open Calculator (Link)</a>
-
-  <div class="card">
-    <h2>📊 PhD Graphs</h2>
-    <p>Interactive visualizations and analysis for my research work.</p>
-    <a href="PhD%20graphs/" class="button-link" target="_blank">Go to Graphs</a>
-  </div>
-</body>
-</html> -->
